@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url('backgroud.1jpg.jpg'); /* Replace 'backgroud.1jpg.jpg' with the path to your image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Fixed background scrolling */
+    color: black; /* Set default text color to black */
+}
+
+header {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url('headbackground.jpg'); /* Replace 'headbackground.jpg' with the path to your image */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    padding: 5em; /* Padding around content */
+    text-align: right; /* Align content to the right */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: right; /* Align menu items to the right */
+}
+
+ul a {
+    color: black; /* Set font color to black */
+    text-decoration: none; /* Remove default underline */
+    position: relative; /* Set position to relative for pseudo-element */
+}
+
+ul a::after {
+    content: ''; /* Add content for pseudo-element */
+    position: absolute; /* Position pseudo-element absolutely */
+    bottom: -2px; /* Position pseudo-element below text */
+    left: 0; /* Start pseudo-element from left */
+    width: 100%; /* Full width of menu item */
+    height: 2px; /* Set height for underline */
+    background-color: black; /* Set color of underline */
+    transition: width 0.3s ease; /* Add transition effect */
+}
+
+ul a:hover::after {
+    width: 100%; /* Increase width on hover to create moving underline */
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li a {
+    color: black; /* Set font color to black */
+    text-decoration: none;
+    border-bottom: 2px solid transparent; /* Initially transparent */
+    transition: border-color 0.3s; /* Add transition effect */
+}
+
+nav ul li a:focus {
+    border-bottom: 2px solid #000; /* Change border color on hover/focus */
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+.destination {
+    margin-bottom: 5rem;
+}
+
+.destination img {
+    max-width: 100%;
+    height: auto;
+}
+/* Adjust the WhatsApp logo size */
+.whatsapp-logo {
+    width: 50px; /* Adjust the width as needed */
+    height: auto;
+    display: inline-block; /* Ensure the image is displayed inline */
+    vertical-align: middle; /* Align the image vertically */
+    margin-right: 10px; /* Add some space between the logos */
+}
+
+/* Adjust the phone logo size */
+.phone-logo {
+    width: 50px; /* Adjust the width as needed */
+    height: auto;
+    display: inline-block; /* Ensure the image is displayed inline */
+    vertical-align: middle; /* Align the image vertically */
+
+footer {
+    background: green;
+    color: black; /* Set text color to black */
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
